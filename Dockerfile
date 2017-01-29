@@ -14,3 +14,4 @@ RUN mkdir /srv/games \
 VOLUME ["games:/srv/games/"]
 
 CMD ["tail", "-f", "/var/log/rsyncd.log"]
+CMD ["rsync", "--no-detach", "--daemon"]
